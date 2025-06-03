@@ -1,0 +1,18 @@
+<audio id="myAudio-bird">
+    <source src="./BattleAbyss.mp3" type="audio/wav">
+  </audio>
+  
+  <button id="playAudioBtn">Probar Sonido</button>
+  
+  <script>
+    const button = document.getElementById('playAudioBtn');
+    const audio = document.getElementById('myAudio-bird');
+  
+    button.addEventListener('click', () => {
+      audio.currentTime = 0; // Reinicia el audio por si ya se ha reproducido
+      audio.play().catch(error => {
+        console.error('Error al reproducir el audio:', error);
+      });
+    });
+  </script>
+  

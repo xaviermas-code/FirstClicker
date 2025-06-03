@@ -1,0 +1,79 @@
+
+
+.text-over {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Orbitron";
+    font-weight: 500;
+    font-size: 4rem;
+    position:absolute;
+    padding-top: 1rem;
+    text-align:center;
+    color:antiquewhite;
+    background: url("./resources/images/end_gameover.jpg") no-repeat center/cover;
+   
+
+}
+
+
+.text-winner {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Orbitron";
+    font-weight: 500;
+    font-size: 4rem;
+    position:absolute;
+    padding-top: 1rem;
+    text-align:center;
+    color:antiquewhite;
+    background: url("./resources/images/winner.jpg") no-repeat center/cover;
+   
+
+}
+
+
+#restartBtn {
+    width:10%;
+    height: 30%;
+    font-family: "Orbitron";
+    font-weight: 500;
+    font-size: 2rem;
+    color:antiquewhite;
+    z-index: 0;
+    position:absolute;
+    text-align: center;
+    visibility:hidden;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Ho centra completament amb tamany de text */
+    pointer-events: none;
+
+
+}
+
+#restartBtn h3 {
+
+  
+    visibility: visible;
+    pointer-events: auto;
+    color:antiquewhite;
+    pointer-events: auto;
+    position: relative; /* Asegura que el texto esté en su lugar correcto */
+    z-index: 2;
+    cursor: pointer;
+    animation: letters 7s linear infinite;
+    animation-delay: 2s; ;
+}
+
+@keyframes letters {
+    0% {
+        color:gold;
+        opacity: 0%
+    }
+
+    100% {
+        color:gold;
+        opacity: 100%
+    }
+}
+

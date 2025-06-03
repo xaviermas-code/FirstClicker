@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primer Clicker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="./resources/reset.css" rel="stylesheet">
+  <link href="./stylefinal.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="winner">
+
+</div>
+  
+<div class="text-winner"> Win</div>
+<div class="restart">
+  <a href="portada.html"><button id="restartBtn"><h3>Restart </h3></button> </a> 
+</div>
+
+<script>
+  setTimeout(() => {
+    var audio2 = new Audio("./resources/audio/winbo.wav", type="audio/wav");
+    audio2.currentTime = 0;
+    audio2.play();
+       
+  }, 1500);
+  setTimeout(() => {
+    var audio3 = new Audio("./resources/audio/music-wins.mp3", type="audio/wav");
+  audio3.currentTime = 0;
+  audio3.play();
+       
+  }, 3000);
+  
+    
+  
+</script>
+
+
+
+
+</body>
+</html>

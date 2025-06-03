@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="./resources/reset.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="./resources/styleAccio.css" rel="stylesheet">
+  
+</head>
+<body>
+<div class="damage-overlay"></div>
+<div class="background"></div>
+<div class="poison-overlay" id="poisonstyle" style="display: none"></div>
+<div class="doublestrike-overlay" id="doublestrike" style="display: none"><h3>Critical Strike</h3></div>
+<div class="container">
+    <section class="right">
+        <p id="attackTimes">You have attacked <span id="counter"></span> times</p>
+    </section>
+    <section class="left">
+        <p id="timerNumber">Time left <span id="timer"></span> seconds</p>
+    </section>
+    <section class="center">
+        <progress id="health" value="500" max="500"></progress>  
+        <div id="coins-div">Coins: <span id="coins"> </span> <img src="./resources/images/png/coin.png" style="width: 1rem; height: 1rem"/></div>  
+    </section>
+    <section class="space">
+        <div class="space1" id="spaceid"><h3>Regenerate life</h3></div>
+        <div class="container-space2" id="space2id"> 
+            <div id="text"><h3>Shop</h3> </div>
+            <div class="weapon">
+            <div id="weapon1"></div>
+            <div id="weapon2"></div>
+            </div>
+            <div class="weapon">
+                <div id="weapon1-text">150 <br> 🟡 </div>
+                <div id="weapon2-text">200 <br> 🟡</div>
+        </div>
+        </div>
+        </div>
+       <br>
+    </section>
+    <footer>
+        
+        <button id="monster-button"></button>
+       <button id="monster-button-child" style="display: none;"></button>
+       <button id="monster-button-boss" style="display: none;"></button>
+        </footer>
+  </div>
+  <audio id="myAudio-bird">
+    <source src="./resources/audio/bird.wav" type="audio/wav">
+  </audio>
+  <audio id="myAudio-enemy">
+    <source src="./resources/audio/BattleAbyss.mp3" type="audio/wav">
+  </audio>
+ 
+
+   <script src="action.js"></script>
+</body>
+
+
+
+</html>

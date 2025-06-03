@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'Naruto';
+    src: url('./fonts/ninja_naruto/njnaruto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  :root {
+    --big_size_height: 300px;
+    --big_size_width: 300px;
+   
+    
+    }
+
+body, html {
+    width:100%;
+    height: 100%;
+    
+    
+}
+
+body {
+    background-image: url("./images/forest_landscape.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 90%;
+
+
+}
+
+p {
+    font-family: "Naruto";
+    font-size: 2rem;
+}
+
+
+  .container {
+    height: 100vh;
+    display: grid;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    gap: 0px;
+    grid-template-areas: "left right"
+    "center center" "space1 space1" "footer footer" ;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows:10% 25% 25% 30% 10%;
+  }
+  
+  .container-space2 {
+    float:right;    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    background-color: #e5e5d2;
+    opacity:1;
+    font-family: "Orbitron";
+    font-size: 1.2rem;
+    border-radius: 8px; /* Opcional, para bordes redondeados */
+    margin: 20px;
+    padding-bottom: 2rem;
+
+  }
+
+  .weapon {
+    display: flex;
+    align-items: center;
+    height: 20%;
+    gap: 2rem;
+  
+
+    
+  }
+
+#weapon1-text #weapon2-text{
+  padding-bottom: 1rem;
+  margin-bottom:1rem;
+}
+
+  
+    
+
+  
+  #weapon1 {
+    background: url("./images/png/poison.png") no-repeat center/contain;
+    height: 100px;
+    width: 100px;
+    z-index: 23;
+    position: relative;
+    
+  }
+
+  #weapon2 {
+    background: url("./images/png/sword.png") no-repeat center/contain;
+    height: 100px;
+    width: 100px;
+    z-index: 23;
+
+    position: relative;
+    
+   
+  }
+
+
+
+  #attackTimes {
+    padding: 1rem 2rem;
+    float: right;
+    color:honeydew;
+
+   
+  }
+
+  #timerNumber {
+    padding: 1rem 2rem;
+    float: left;
+    color:honeydew;
+  }
+
+  .right {
+    grid-area: right;
+    background-color: #1c104e;
+    opacity:0.8;
+    
+    
+  }
+
+  .left {
+    grid-area:left;
+    background-color: #1c104e;
+    opacity:0.8;
+  }
+
+  .center {
+    grid-area:center;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    position: absolute;
+  }
+
+  #coins-div {
+    margin-top:0.5rem;
+    font-family: "Orbitron";
+    font-weight: 700;
+    align-items: center;
+    font-size: 1rem;
+    color: #1c104e;
+  }
+
+  .space {
+    grid-area:space1;
+    position: relative;
+    width:100%;
+   }
+
+   .space1 {
+    position: relative;
+   }
+
+   .space1 h3{
+
+    grid-area:space1;
+    position:relative;
+    font-family: "Naruto";
+    font-weight: 700;
+    align-items: center;
+    left: 20%;
+    font-size: 1.25rem;
+    color: whitesmoke;
+    letter-spacing: 0.2rem ;
+    animation: health_anim 1.5s ease-out forwards;
+    z-index: 15;
+
+
+
+   }
+
+   @keyframes health_anim {
+    0% {
+      opacity: 1;
+      transform: rotate(-20deg) scale(1.5);
+    }
+    100% {
+      opacity:0;
+      transform: rotate(-20deg) scale(0.5);
+    }
+    
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    padding-top: 1rem;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    
+  }
+
+#monster-button {
+    overflow: hidden;
+    position:absolute;
+    margin-top: 0;
+    width: 175px;
+    aspect-ratio: 1 / 1;
+    background: url("./images/png/baby_monster.png") no-repeat center/contain;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(
+      42% 0%, 58% 0%, 73% 5%, 84% 14%, 92% 27%, 94% 43%, 
+      90% 57%, 87% 67%, 80% 77%, 70% 86%, 60% 93%, 50% 97%,
+      40% 93%, 30% 87%, 20% 78%, 13% 66%, 8% 50%, 8% 35%,
+      15% 20%, 28% 7%
+    );
+    /*transition: transform 1s ease; */
+    z-index: 5;
+    
+    
+  }
+
+  progress {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    width: 20rem;
+    height: 1.25rem;
+    appearance: none; /* elimina el estilo por defecto */
+    z-index: 3;
+  }
+  
+  /* Change style progress bar */
+  progress::-webkit-progress-bar {
+    background-color: #1c104e;
+    border-radius: 10px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #ff4444;
+    border-radius: 10px;
+  }
+  
+  progress::-moz-progress-bar {
+    background-color: #ff4444;
+    border-radius: 10px;
+  }
+  
+/* Damage effect */
+
+.damage-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.4); /* rojo semitransparente */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+/* poison effect */
+
+.poison-overlay {
+    position: absolute;
+    grid-area: space1;
+    top: 50%; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/png/smoke_poison.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index:990;
+    animation: poisoneffect 10s ease-out forwards;
+    pointer-events: none;
+ 
+}
+
+@keyframes poisoneffect {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity:0;
+    transform: scale(0);
+  }
+  
+}
+
+/* Double Strike effect */
+
+.doublestrike-overlay {
+    position: absolute;
+    grid-area: space1;
+    top: 40%; left: 55%;
+    width: 100%;
+    height: 100%;
+    font-family: "Naruto";
+    font-size: 1.5rem;
+
+
+
+}
+
+  /* Slash effect */
+
+  
+    .slash-anim {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px; /* ajusta según el tamaño del botón */
+        height: 100px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background: url('./images/png/slash2.png') no-repeat center/contain;
+        opacity: 1;
+        animation: slashFade 0.3s ease-out forwards;
+        pointer-events: none;
+        z-index: 12;
+      
+      }
+      
+@keyframes slashFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  50%{
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
+  100% {
+    opacity:1;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1.5);
+  }
+  
+}
+
+/* Monster 2 */
+
+#monster-button-child {
+    position: absolute;
+    width: 175px;
+    aspect-ratio: 1 / 1;
+    background: url("./images/png/monster_child.png") no-repeat center/contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    clip-path: polygon(
+      42% 0%, 58% 0%, 73% 5%, 84% 14%, 92% 27%, 94% 43%, 
+      90% 57%, 87% 67%, 80% 77%, 70% 86%, 60% 93%, 50% 97%,
+      40% 93%, 30% 87%, 20% 78%, 13% 66%, 8% 50%, 8% 35%,
+      15% 20%, 28% 7%
+    );
+  } 
+
+  /* Monster boss */
+
+  #monster-button-boss {
+    z-index: 15;
+    position:absolute;
+    height: var(--big_size_height); 
+    width: var(--big_size_width);
+    background: url('./images/monster_boss_final2.png') no-repeat center/contain;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: transform 0.2s ease;
+    clip-path: polygon(
+      38% 0%, 60% 0%, 75% 10%, 84% 23%, 92% 40%, 94% 58%,
+      85% 72%, 74% 82%, 60% 90%, 45% 95%, 30% 90%, 20% 82%,
+      10% 70%, 6% 50%, 12% 30%, 22% 15%
+    );
+  }
+  
+  #monster-boss-button:hover {
+    transform: scale(1.05);
+  }
+  
+  
+
+ 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primer Clicker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="./resources/reset.css" rel="stylesheet">
+  <link href="./resources/style2.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body class="portada">
+  <div class="container_portada">
+    <div class="wrapper">
+     <a href="accio2.html"><button id="startBtn">
+        Start!
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      </a>
+    </div>
+
+
+
+
+    </div>
+    
+  
+
+  <img id="hero_portada" src="./resources/images/heroe_portada4.png" alt="Heroe portada"/>
+  </div>
+  
+  <audio id="myAudio">
+    <source src="./resources/audio/Pixelated Heroes.mp3" type="audio/mp3">
+  </audio>
+  
+  <script>
+    const button = document.getElementById("startBtn");
+    const audio = document.getElementById("myAudio");
+  
+    button.addEventListener("mouseover", () => {
+      audio.play();
+      audio.volume = 1.0;
+      audio.currentTime = 0;
+    });
+  </script>
+    
+    
+    </script>
+  </div>
+</body>
+</html>

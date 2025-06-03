@@ -1,0 +1,148 @@
+:root {
+    --big_size_height: 100px;
+    --big_size_width: 200px;
+    --right: 3px;
+    --top: 40px;
+    }
+    
+    button {
+      min-height: 200px;
+      
+      display:flex;
+    }
+    .portada {
+      background:url("./images/portada3.png") ;
+      background-repeat: no-repeat; 
+      display:flex;
+      background-position: center bottom;
+      background-size: cover;
+        width: 100vw;
+        height: 100vh;
+      /* cover permet que cobreixi tota pantalla i no-repeat permet que no es repteixi imatge */
+      
+      padding: 25px;
+      justify-content: center;        /* optional: center horizontally */
+        align-items: center;   
+    
+    
+    
+    }
+    #hero_portada {
+        width:15%;
+        height: auto;
+        display: flex;
+        position:absolute;
+        flex-direction: column;
+        justify-content: bottom;
+        align-items: bottom;
+       
+        top: 62vh;   /* 10% de l'alçada del viewport */
+        left: 50%;   /* 5% de l'amplada del viewport */
+}
+
+
+
+    
+    .accio_fondo {
+      background: url("./images/forest_landscape.jpg");
+      background-repeat: no-repeat; 
+      display:flex;
+      background-position: center bottom;
+      background-size: cover;
+        width: 100vw;
+        height: 100vh;
+      /* cover permet que cobreixi tota pantalla i no-repeat permet que no es repteixi imatge */
+      
+      padding: 25px;
+      justify-content: center;        /* optional: center horizontally */
+        align-items: center;   
+    
+    
+    }
+    
+    #center {
+      margin: auto;
+      text-align: center;
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+      
+    }
+    
+    #start {
+      
+      border-radius: 10px;
+      font-size: 30px;
+      width: 20%;
+      height: 80px;
+    display:flex;
+      font-family: Garamond, serif;
+      background: rgba(254, 231, 226, 0.5);
+      
+            }
+    #start:hover {
+          background: url('https://img.freepik.com/premium-vector/set-realistic-bloody-splatters-drop-blob-blood-bloodstains-vector-illustration-isolated_168129-590.jpg?size=626&ext=jpg&ga=GA1.1.1862566098.1674227923');
+          transition: 2s;
+      }
+    
+    /*
+    #zombie {
+    
+    
+      /* si no poses block no aplica margins */
+      /*margin-left: 45%;
+      margin-top: 73px;
+      */
+    
+      /*content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTt2e1JzUfrRpZKRfyTXsgT9kP4Ru1atzhQA&usqp=CAU');
+      height: var(--big_size_height); 
+      width: var(--big_size_width);
+   
+      
+    }
+    
+    #final {
+      background: url('https://t3.ftcdn.net/jpg/03/14/56/66/360_F_314566645_UNHlYyGK2EVdGQ8MoNw95vvH44yknrc7.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+    
+    #arma {
+      height: 30px;
+      width: 50px;
+    
+    
+    }
+       
+    #btn{
+    
+    
+    }
+    p{
+      color:white;
+    }
+    
+    .blood {
+      position:absolute;
+      top:var(--top);
+      right: var(--right);
+      z-index: 1;
+      
+    }
+    #monster1 {
+       
+            width:15%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: bottom;
+            align-items: bottom;
+      
+            top: 62vh;   /* 10% de l'alçada del viewport */
+            /*left: 40vw;   /* 5% de l'amplada del viewport */
+   /* }*/
+    
+  
+      

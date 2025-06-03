@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primer Clicker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="./resources/style.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+  </script> -->
+</head>
+<body class="accio_fondo" onload="startCountdown();">
+
+
+ <p id="color">Has atacat <span id="counter"></span> vegades</p>
+  <progress id="health" value="500" max="500"></progress>
+  <button id="btn">Ataca</button>
+ <script src="script.js">
+  </script>
+
+  <button id="weapon" hidden="true"> <img id="arma" src="https://static.vecteezy.com/system/resources/previews/008/070/266/non_2x/flame-thrower-icon-illustration-free-vector.jpg" /> <center>Arma </center></button>
+  <p id="missatge"> </p>
+  <p>Queden <span id="timer"></span> segons</p>
+<!-- <script src="contador.js"></script> -->
+ 
+  <div>
+    <img id ="zombie2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTt2e1JzUfrRpZKRfyTXsgT9kP4Ru1atzhQA&usqp=CAU'" alt="Girl in a jacket"> 
+
+<!-- <img class="blood"  src="https://media.wired.com/photos/5bd262d4b1e96429a704ba17/master/w_2560%2Cc_limit/bloodyhand_top-1036615756.jpg" width="50" height="60"> -->
+
+<img id ="monster1" src="./resources/images/png/baby_monster.png" alt="Girl in a jacket"/> </div>
+
+ 
+
+ 
+ <script type="text/javascript">
+function startCountdown() {
+  var i = 15;
+  function count() {
+    setTimeout(function() {
+      document.getElementById("timer").innerHTML = i ;
+      if(i>0) count();
+      else if (i===0) {document.getElementById("missatge").innerHTML = "Gameover";
+      let atacStop = document.getElementById("btn");
+atacStop.setAttribute("hidden", true);
+    let atacStop2 = document.getElementById("weapon");
+atacStop2.setAttribute("hidden", true);
+
+      }
+    }, 1000);
+    i--;
+  }
+  count();
+ 
+
+ 
+}
+ 
+
+  </script>
+</body>
+
+</html>
